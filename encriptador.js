@@ -12,9 +12,7 @@ function procesarTexto() {
         document.getElementById('texto_resultado').textContent = resultado;
         document.getElementById("resultado").style.visibility = "visible"; 
         document.getElementById("default").style.display = "none";
-        document.getElementById("btnEn").style.display = "none"; 
-        document.getElementById("btnDes").style.display = "block"; 
-        document.querySelector(".btn_copiar").style.display = "block"; 
+          
         return resultado;
     } else {
         Swal.fire({
@@ -37,12 +35,9 @@ function desencriptar() {
     console.log("Texto desencriptado:", resultado);
 
     document.getElementById('resultado').textContent = resultado;
-
-    // Ocultar el div resultado después de asignar el texto desencriptado
-    document.getElementById("default").style.display = "none"; 
-    document.getElementById("btnEn").style.display = "block"; 
-    document.getElementById("btnDes").style.display = "none"; 
-    document.getElementById("copiar").style.display = "none";
+    document.getElementById("resultado").style.visibility = "visible"; 
+    document.getElementById("default").style.display = "none";
+    
 
     return resultado; 
 }
